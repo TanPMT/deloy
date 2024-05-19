@@ -1,5 +1,13 @@
-from django.db import connection
+import os
+import django
 from django.core.management import call_command
+
+# Thiết lập biến môi trường Django
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'FOF.settings')
+django.setup()
+
+# Sau khi cấu hình Django, bạn có thể sử dụng các chức năng liên quan đến database
+from django.db import connection
 
 def initialize_db():
     with connection.cursor() as cursor:
