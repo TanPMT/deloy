@@ -25,11 +25,14 @@ SECRET_KEY = 'django-insecure-q((2jp@*d5tdk-8s4-!(x)$c6+j7%z^%1x11_dn&lt@kb8r&s3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["foft4k.me", "www.foft4k.me"]
 
    # settings.py
+
+
 PROTOCOL = 'https'
-DOMAIN = 'foft4k.me'
+DOMAIN = 'www.foft4k.me'
+
 
 # Application definition
 #pip install allauth
