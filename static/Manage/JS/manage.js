@@ -50,7 +50,7 @@ function formatDate(date) {
         var pH_num = document.getElementById('pH'); 
         var doAm = document.getElementById('doam'); 
   
-        var address = landInfo.land_pos;
+        var address = landInfo.position;
         var geocodingUrl = `https://rsapi.goong.io/geocode?address=${encodeURIComponent(address)}&api_key=irESJaYhu9GSYh2g8waOxsDolPKwMzkFcGKNGxNy`;
         // Điền dữ liệu vào phần tử map    
         fetch(geocodingUrl)
