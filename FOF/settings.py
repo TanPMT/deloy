@@ -25,6 +25,11 @@ SECRET_KEY = 'django-insecure-q((2jp@*d5tdk-8s4-!(x)$c6+j7%z^%1x11_dn&lt@kb8r&s3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://foft4k.me/',
+    'https://www.foft4k.me/'
+]
+
 ALLOWED_HOSTS = ["*"]
 
    # settings.py
