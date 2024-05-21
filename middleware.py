@@ -32,3 +32,14 @@ class CloudflareCSRFMiddleware(MiddlewareMixin):
         if any(ip in ip_network(cf_ip) for cf_ip in CLOUDFLARE_IP_RANGES):
             setattr(request, '_dont_enforce_csrf_checks', True)
         return None
+# app/middleware.py
+
+class CloudflareCSRFMiddleware(MiddlewareMixin):
+    def process_request(self, request):
+        if 'HTTP_CF_CONNECTING_IP' in request.META:
+            request.META['REMOTE_ADDR'] = request.META['HTTP_CF_CONNECTING_IP']
+        ip = ip_address(request.META['REMOTE_ADDR'])
+        if any(ip in ip_network(cf_ip) for cf_ip in CLOUDFLARE_IP_RANGES):
+            setattr(request, '_dont_enforce_csrf_checks', True)
+        return None
+
