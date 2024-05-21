@@ -30,7 +30,13 @@ CSRF_TRUSTED_ORIGINS = [
     'https://www.foft4k.me/'
 ]
 
-ALLOWED_HOSTS = ["*"]
+
+ALLOWED_HOSTS = [
+    'foft4k.me',
+    'www.foft4k.me',
+    'foft4k.vercel.app'
+]
+
 
    # settings.py
 
