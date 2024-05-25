@@ -39,6 +39,7 @@ ALLOWED_HOSTS = [
 
 # myproject/settings.py
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
